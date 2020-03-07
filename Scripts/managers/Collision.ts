@@ -15,9 +15,13 @@ module managers
                         {
                             case enums.GameObjectType.ISLAND:
                                 console.log("Collision with Island!");
+                                let yaySound = createjs.Sound.play("yay");
+                                yaySound.volume = 0.2;
                                 break;
                             case enums.GameObjectType.CLOUD:
                                 console.log("Collision with Cloud!");
+                                let thunderSound = createjs.Sound.play("thunder");
+                                thunderSound.volume = 0.2;
                                 break;
                         }
                         object2.isColliding = true;
@@ -51,9 +55,13 @@ module managers
                         {
                             case enums.GameObjectType.ISLAND:
                                 console.log("Collision with Island!");
+                                let yaySound = createjs.Sound.play("yay");
+                                yaySound.volume = 0.2;
                                 break;
                             case enums.GameObjectType.CLOUD:
                                 console.log("Collision with Cloud!");
+                                let thunderSound = createjs.Sound.play("thunder");
+                                thunderSound.volume = 0.2;
                                 break;
                         }
                     object2.isColliding = true;

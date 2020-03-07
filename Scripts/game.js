@@ -17,7 +17,10 @@ var Game = (function () {
         { id: "ocean", src: "./Assets/images/ocean.gif" },
         { id: "plane", src: "./Assets/images/plane.png" },
         { id: "island", src: "./Assets/images/island.png" },
-        { id: "cloud", src: "./Assets/images/cloud.png" }
+        { id: "cloud", src: "./Assets/images/cloud.png" },
+        { id: "engine", src: "./Assets/audio/engine.ogg" },
+        { id: "yay", src: "./Assets/audio/yay.ogg" },
+        { id: "thunder", src: "./Assets/audio/thunder.ogg" },
     ];
     function Preload() {
         assets = new createjs.LoadQueue(); // asset container
