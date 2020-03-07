@@ -23,7 +23,7 @@ module objects
 
 
         public Start(): void {
-            this.name = "Player";
+            this.type = enums.GameObjectType.PLAYER;
         }
 
         public Update(): void {

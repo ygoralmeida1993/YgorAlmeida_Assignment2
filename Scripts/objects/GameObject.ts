@@ -11,6 +11,7 @@ module objects
         private _velocity:Vector2;
         private _isColliding:boolean;
         private _isCentered:boolean;
+        private _type: enums.GameObjectType;
         
         // PUBLIC PROPERTIES
         get width():number
@@ -91,6 +92,16 @@ module objects
             }
         }
 
+        public get type() : enums.GameObjectType 
+        {
+            return this._type;
+        }
+
+        public set type(v : enums.GameObjectType) 
+        {
+            this._type = v;
+        }
+
 
         // CONSTRUCTOR
         constructor(imageString?:Object, x?:number, y?:number, centered?:boolean)
@@ -132,6 +143,8 @@ module objects
             {
                 this.position = second;
             }
+
+            this.type = enums.GameObjectType.UNDEFINED;
             
 
         }

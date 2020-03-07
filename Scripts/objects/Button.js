@@ -44,7 +44,7 @@ var objects;
          * @memberof Button
          */
         Button.prototype.Start = function () {
-            this.name = "Button";
+            this.type = enums.GameObjectType.BUTTON;
         };
         Button.prototype.Update = function () {
         };

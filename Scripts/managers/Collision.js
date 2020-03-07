@@ -9,7 +9,14 @@ var managers;
             var radii = object1.halfHeight + object2.halfHeight;
             if (objects.Vector2.sqrDistance(object1.position, object2.position) < (radii * radii)) {
                 if (!object2.isColliding) {
-                    console.log("Collision!");
+                    switch (object2.type) {
+                        case enums.GameObjectType.ISLAND:
+                            console.log("Collision with Island!");
+                            break;
+                        case enums.GameObjectType.CLOUD:
+                            console.log("Collision with Cloud!");
+                            break;
+                    }
                     object2.isColliding = true;
                     return true;
                 }
@@ -30,7 +37,14 @@ var managers;
                 object1TopLeft.y < object2TopLeft.y + object2.height &&
                 object1TopLeft.y + object1.height > object2TopLeft.y) {
                 if (!object2.isColliding) {
-                    console.log("Collision!");
+                    switch (object2.type) {
+                        case enums.GameObjectType.ISLAND:
+                            console.log("Collision with Island!");
+                            break;
+                        case enums.GameObjectType.CLOUD:
+                            console.log("Collision with Cloud!");
+                            break;
+                    }
                     object2.isColliding = true;
                     return true;
                 }

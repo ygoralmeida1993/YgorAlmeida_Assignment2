@@ -45,6 +45,7 @@ var objects;
             if (second instanceof objects.Vector2) {
                 _this.position = second;
             }
+            _this.type = enums.GameObjectType.UNDEFINED;
             return _this;
         }
         Object.defineProperty(GameObject.prototype, "width", {
@@ -125,6 +126,16 @@ var objects;
                 if (newState) {
                     this._centerGameObject();
                 }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(GameObject.prototype, "type", {
+            get: function () {
+                return this._type;
+            },
+            set: function (v) {
+                this._type = v;
             },
             enumerable: true,
             configurable: true

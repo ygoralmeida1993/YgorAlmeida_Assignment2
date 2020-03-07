@@ -41,6 +41,7 @@ module objects
         // PUBLIC METHODS
         public Start(): void 
         {
+            this.type = enums.GameObjectType.PLANE;
             this._verticalPosition = 430; // locked to the bottom of the screen
         }
 

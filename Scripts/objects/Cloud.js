@@ -34,6 +34,7 @@ var objects;
         };
         // PUBLIC METHODS
         Cloud.prototype.Start = function () {
+            this.type = enums.GameObjectType.CLOUD;
             this.alpha = 0.5; // 50% transparent
             this.Reset();
         };

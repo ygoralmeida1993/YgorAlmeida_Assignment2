@@ -51,8 +51,11 @@ module scenes
 
            this._island.Update();
 
+           managers.Collision.AABBCheck(this._plane, this._island);
+
            this._clouds.forEach(cloud => {
                cloud.Update();
+               managers.Collision.squaredRadiusCheck(this._plane, cloud);
            });
         }
         

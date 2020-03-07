@@ -11,7 +11,15 @@ module managers
             {
                 if(!object2.isColliding)
                     {
-                        console.log("Collision!");
+                        switch(object2.type)
+                        {
+                            case enums.GameObjectType.ISLAND:
+                                console.log("Collision with Island!");
+                                break;
+                            case enums.GameObjectType.CLOUD:
+                                console.log("Collision with Cloud!");
+                                break;
+                        }
                         object2.isColliding = true;
                         return true;
                     }
@@ -39,7 +47,15 @@ module managers
             {
                 if(!object2.isColliding)
                 {
-                    console.log("Collision!");
+                    switch(object2.type)
+                        {
+                            case enums.GameObjectType.ISLAND:
+                                console.log("Collision with Island!");
+                                break;
+                            case enums.GameObjectType.CLOUD:
+                                console.log("Collision with Cloud!");
+                                break;
+                        }
                     object2.isColliding = true;
                     return true;
                 }

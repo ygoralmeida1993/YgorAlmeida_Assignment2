@@ -33,6 +33,7 @@ module objects
         // PUBLIC METHODS
         public Start(): void 
         {
+            this.type = enums.GameObjectType.ISLAND;
             this._verticalSpeed = 5; // 5 px per frame
             this.velocity = new Vector2(0, this._verticalSpeed);
             this.Reset();
