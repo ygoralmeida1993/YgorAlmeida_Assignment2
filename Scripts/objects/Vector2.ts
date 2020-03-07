@@ -64,7 +64,10 @@ module objects
         }
 
         // CONSTRUCTOR
-        constructor(x: number = 0, y:number = 0, displayObject?: createjs.DisplayObject)
+        constructor(x?: number, y?:number, displayObject?: createjs.DisplayObject)
+        constructor(coordinates: number[])
+        constructor(vector: Vector2)
+        constructor(first: number[] | Vector2 | number = 0, second: number = 0, third?: createjs.DisplayObject)
         {
             // Initialize member variables
             this._x = 0;
@@ -72,14 +75,29 @@ module objects
             this._magnitude = 0;
             this._sqrMagnitude = 0;
 
-            if (displayObject != undefined)
+            if (third != undefined)
             {
-                this._displayObject = displayObject;
+                this._displayObject = third;
             }
 
             // set x and y
-            this.x = x;
-            this.y = y;
+            if (typeof first == "number")
+            {
+                this._x = first;
+                this._y = second;
+            }
+
+            if (first instanceof Array)
+            {
+                this._x = first[0];
+                this._y = first[1];
+            }
+
+            if (first instanceof Vector2)
+            {
+                this.x = first.x;
+                this.y = first.y;
+            }
         }
 
         // PRIVATE METHODS
