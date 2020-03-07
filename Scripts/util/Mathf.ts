@@ -1,6 +1,6 @@
 module util
 {
-    export class Math
+    export class Mathf
     {
         public static Clamp(value:number, min:number, max:number)
         {
@@ -33,12 +33,17 @@ module util
 
         public static Lerp(a:number, b:number, t:number):number
         {
-            return a + (b - a) * Math.Clamp01(t);
+            return a + (b - a) * Mathf.Clamp01(t);
         }
 
         public static LerpUnclamped(a:number, b:number, t:number):number
         {
             return a + (b - a) * t;
+        }
+
+        public static RandomRange(min:number, max:number):number
+        {
+            return Math.random() * (max  - min + 1) + min;
         }
     }
 }

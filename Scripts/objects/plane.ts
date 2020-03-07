@@ -34,7 +34,7 @@ module objects
 
         private _move(): void
         {
-            let newPositionX = util.Math.Lerp(this.position.x, this.stage.mouseX, 0.05);
+            let newPositionX = util.Mathf.Lerp(this.position.x, this.stage.mouseX, 0.05);
             this.position = new Vector2(newPositionX, this._verticalPosition);
         }
         

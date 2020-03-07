@@ -1,10 +1,10 @@
 "use strict";
 var util;
 (function (util) {
-    var Math = /** @class */ (function () {
-        function Math() {
+    var Mathf = /** @class */ (function () {
+        function Mathf() {
         }
-        Math.Clamp = function (value, min, max) {
+        Mathf.Clamp = function (value, min, max) {
             if (value < min) {
                 value = min;
             }
@@ -13,7 +13,7 @@ var util;
             }
             return value;
         };
-        Math.Clamp01 = function (value) {
+        Mathf.Clamp01 = function (value) {
             if (value < 0.0) {
                 return 0.0;
             }
@@ -22,14 +22,17 @@ var util;
             }
             return value;
         };
-        Math.Lerp = function (a, b, t) {
-            return a + (b - a) * Math.Clamp01(t);
+        Mathf.Lerp = function (a, b, t) {
+            return a + (b - a) * Mathf.Clamp01(t);
         };
-        Math.LerpUnclamped = function (a, b, t) {
+        Mathf.LerpUnclamped = function (a, b, t) {
             return a + (b - a) * t;
         };
-        return Math;
+        Mathf.RandomRange = function (min, max) {
+            return Math.random() * (max - min + 1) + min;
+        };
+        return Mathf;
     }());
-    util.Math = Math;
+    util.Mathf = Mathf;
 })(util || (util = {}));
-//# sourceMappingURL=Math.js.map
+//# sourceMappingURL=Mathf.js.map
