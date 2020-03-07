@@ -52,4 +52,4 @@ var objects;
     }(objects.GameObject));
     objects.Plane = Plane;
 })(objects || (objects = {}));
-//# sourceMappingURL=plane.js.map
+//# sourceMappingURL=Plane.js.map
