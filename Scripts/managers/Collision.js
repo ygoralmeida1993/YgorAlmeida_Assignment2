@@ -9,20 +9,7 @@ var managers;
             var radii = object1.halfHeight + object2.halfHeight;
             if (objects.Vector2.sqrDistance(object1.position, object2.position) < (radii * radii)) {
                 if (!object2.isColliding) {
-                    switch (object2.type) {
-                        case enums.GameObjectType.ISLAND:
-                            console.log("Collision with Island!");
-                            var yaySound = createjs.Sound.play("yay");
-                            yaySound.volume = 0.2;
-                            config.Game.SCORE_BOARD.Score += 100;
-                            break;
-                        case enums.GameObjectType.CLOUD:
-                            console.log("Collision with Cloud!");
-                            var thunderSound = createjs.Sound.play("thunder");
-                            thunderSound.volume = 0.2;
-                            config.Game.SCORE_BOARD.Lives -= 1;
-                            break;
-                    }
+                    Collision._collisionResponse(object2);
                     object2.isColliding = true;
                     return true;
                 }
@@ -43,20 +30,7 @@ var managers;
                 object1TopLeft.y < object2TopLeft.y + object2.height &&
                 object1TopLeft.y + object1.height > object2TopLeft.y) {
                 if (!object2.isColliding) {
-                    switch (object2.type) {
-                        case enums.GameObjectType.ISLAND:
-                            console.log("Collision with Island!");
-                            var yaySound = createjs.Sound.play("yay");
-                            yaySound.volume = 0.2;
-                            config.Game.SCORE_BOARD.Score += 100;
-                            break;
-                        case enums.GameObjectType.CLOUD:
-                            console.log("Collision with Cloud!");
-                            var thunderSound = createjs.Sound.play("thunder");
-                            thunderSound.volume = 0.2;
-                            config.Game.SCORE_BOARD.Lives -= 1;
-                            break;
-                    }
+                    Collision._collisionResponse(object2);
                     object2.isColliding = true;
                     return true;
                 }
@@ -65,6 +39,30 @@ var managers;
                 object2.isColliding = false;
             }
             return false;
+        };
+        /**
+         * Helper method to assist with Collision Response
+         *
+         * @private
+         * @static
+         * @param {objects.GameObject} object2
+         * @memberof Collision
+         */
+        Collision._collisionResponse = function (object2) {
+            switch (object2.type) {
+                case enums.GameObjectType.ISLAND:
+                    console.log("Collision with Island!");
+                    var yaySound = createjs.Sound.play("yay");
+                    yaySound.volume = 0.2;
+                    config.Game.SCORE_BOARD.Score += 100;
+                    break;
+                case enums.GameObjectType.CLOUD:
+                    console.log("Collision with Cloud!");
+                    var thunderSound = createjs.Sound.play("thunder");
+                    thunderSound.volume = 0.2;
+                    config.Game.SCORE_BOARD.Lives -= 1;
+                    break;
+            }
         };
         return Collision;
     }());
