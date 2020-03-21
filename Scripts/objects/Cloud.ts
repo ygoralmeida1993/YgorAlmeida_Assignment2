@@ -11,7 +11,7 @@ module objects
         // CONSTRUCTOR
         constructor()
         {
-            super(config.Game.ASSETS.getResult("cloud"), new Vector2(), true);
+            super(config.Game.TEXTURE_ATLAS, "cloud", new Vector2(), true);
 
             this.Start();
         }

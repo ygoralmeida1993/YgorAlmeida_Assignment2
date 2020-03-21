@@ -19,7 +19,7 @@ var objects;
         // PUBLIC PROPERTIES
         // CONSTRUCTOR
         function Cloud() {
-            var _this = _super.call(this, config.Game.ASSETS.getResult("cloud"), new objects.Vector2(), true) || this;
+            var _this = _super.call(this, config.Game.TEXTURE_ATLAS, "cloud", new objects.Vector2(), true) || this;
             _this.Start();
             return _this;
         }

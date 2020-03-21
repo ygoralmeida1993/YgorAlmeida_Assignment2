@@ -19,7 +19,7 @@ var objects;
         // PUBLIC PROPERTIES
         // CONSTRUCTOR
         function Ocean() {
-            var _this = _super.call(this, config.Game.ASSETS.getResult("ocean")) || this;
+            var _this = _super.call(this, config.Game.OCEAN_ATLAS, "ocean") || this;
             _this.Start();
             return _this;
         }

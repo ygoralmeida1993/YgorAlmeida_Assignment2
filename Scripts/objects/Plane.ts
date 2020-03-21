@@ -15,7 +15,7 @@ module objects
         // CONSTRUCTOR
         constructor()
         {
-            super(config.Game.ASSETS.getResult("plane"), 0, 0, true);
+            super(config.Game.TEXTURE_ATLAS, "plane", 0, 0, true);
 
             this.Start();
         }

@@ -10,7 +10,7 @@ module objects
         // CONSTRUCTOR
         constructor()
         {
-            super(config.Game.ASSETS.getResult("island"), new Vector2(), true);
+            super(config.Game.TEXTURE_ATLAS, "island", new Vector2(), true);
 
             this.Start();
         }
