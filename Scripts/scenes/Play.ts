@@ -9,6 +9,8 @@ module scenes
 
         private _clouds: Array<objects.Cloud>;
 
+        private _scoreBoard: managers.ScoreBoard;
+
         // PUBLIC PROPERTIES
 
         // CONSTRUCTOR
@@ -39,6 +41,8 @@ module scenes
                 this._clouds.push(new objects.Cloud());
             }
             
+            this._scoreBoard = new managers.ScoreBoard();
+            config.Game.SCORE_BOARD = this._scoreBoard;
 
              this.Main();
         }        
@@ -70,6 +74,10 @@ module scenes
             for (const cloud of this._clouds) {
                 this.addChild(cloud);
             }
+
+            this.addChild(this._scoreBoard.LivesLabel);
+
+            this.addChild(this._scoreBoard.ScoreLabel);
         }
 
         

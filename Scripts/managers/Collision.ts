@@ -17,11 +17,13 @@ module managers
                                 console.log("Collision with Island!");
                                 let yaySound = createjs.Sound.play("yay");
                                 yaySound.volume = 0.2;
+                                config.Game.SCORE_BOARD.Score += 100;
                                 break;
                             case enums.GameObjectType.CLOUD:
                                 console.log("Collision with Cloud!");
                                 let thunderSound = createjs.Sound.play("thunder");
                                 thunderSound.volume = 0.2;
+                                config.Game.SCORE_BOARD.Lives -= 1;
                                 break;
                         }
                         object2.isColliding = true;
@@ -57,11 +59,13 @@ module managers
                                 console.log("Collision with Island!");
                                 let yaySound = createjs.Sound.play("yay");
                                 yaySound.volume = 0.2;
+                                config.Game.SCORE_BOARD.Score += 100;
                                 break;
                             case enums.GameObjectType.CLOUD:
                                 console.log("Collision with Cloud!");
                                 let thunderSound = createjs.Sound.play("thunder");
                                 thunderSound.volume = 0.2;
+                                config.Game.SCORE_BOARD.Lives -= 1;
                                 break;
                         }
                     object2.isColliding = true;
