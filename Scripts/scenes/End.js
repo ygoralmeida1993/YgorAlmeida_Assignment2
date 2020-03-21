@@ -45,6 +45,9 @@ var scenes;
                 config.Game.SCENE = scenes.State.PLAY;
             });
         };
+        End.prototype.Clean = function () {
+            this.removeAllChildren();
+        };
         return End;
     }(objects.Scene));
     scenes.End = End;

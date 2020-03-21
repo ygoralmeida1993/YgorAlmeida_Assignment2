@@ -61,6 +61,10 @@ var managers;
                     var thunderSound = createjs.Sound.play("thunder");
                     thunderSound.volume = 0.2;
                     config.Game.SCORE_BOARD.Lives -= 1;
+                    // check if lives falls less than 1 and then switch to END scene
+                    if (config.Game.LIVES < 1) {
+                        config.Game.SCENE = scenes.State.END;
+                    }
                     break;
             }
         };

@@ -51,6 +51,10 @@ module scenes
 
         }
 
+        public Clean(): void{
+            this.removeAllChildren();
+        }
+
         
     }
 }

@@ -61,7 +61,7 @@ var Game = (function () {
         console.log("%c Scene Switched...", "color: green; font-size: 16px;");
         // clean up
         if (currentSceneState != scenes.State.NO_SCENE) {
-            currentScene.removeAllChildren();
+            currentScene.Clean();
             stage.removeAllChildren();
         }
         // switch to the new scene

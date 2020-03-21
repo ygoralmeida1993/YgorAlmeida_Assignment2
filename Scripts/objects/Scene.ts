@@ -41,5 +41,13 @@ module objects
          * @memberof Scene
          */
         public abstract Main():void;
+
+        /**
+         * This method performs clean up functions for the scene
+         *
+         * @abstract
+         * @memberof Scene
+         */
+        public abstract Clean():void;
     }
 }

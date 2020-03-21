@@ -81,7 +81,7 @@ let Game = (function(){
         // clean up
         if(currentSceneState != scenes.State.NO_SCENE)
         {
-            currentScene.removeAllChildren();
+            currentScene.Clean();
             stage.removeAllChildren();
         }
 
