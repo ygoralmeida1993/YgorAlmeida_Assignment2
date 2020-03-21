@@ -10,6 +10,7 @@ module config
         public static CLOUD_NUM: number = 4;
         public static LIVES: number = 5;
         public static SCORE: number = 0;
+        public static HIGH_SCORE: number = 0;
         public static SCORE_BOARD: managers.ScoreBoard;
     }
 }

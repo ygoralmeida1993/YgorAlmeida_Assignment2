@@ -51,19 +51,26 @@ var managers;
         Collision._collisionResponse = function (object2) {
             switch (object2.type) {
                 case enums.GameObjectType.ISLAND:
-                    console.log("Collision with Island!");
-                    var yaySound = createjs.Sound.play("yay");
-                    yaySound.volume = 0.2;
-                    config.Game.SCORE_BOARD.Score += 100;
+                    {
+                        console.log("Collision with Island!");
+                        var yaySound = createjs.Sound.play("yay");
+                        yaySound.volume = 0.2;
+                        config.Game.SCORE_BOARD.Score += 100;
+                        if (config.Game.SCORE > config.Game.HIGH_SCORE) {
+                            config.Game.HIGH_SCORE = config.Game.SCORE;
+                        }
+                    }
                     break;
                 case enums.GameObjectType.CLOUD:
-                    console.log("Collision with Cloud!");
-                    var thunderSound = createjs.Sound.play("thunder");
-                    thunderSound.volume = 0.2;
-                    config.Game.SCORE_BOARD.Lives -= 1;
-                    // check if lives falls less than 1 and then switch to END scene
-                    if (config.Game.LIVES < 1) {
-                        config.Game.SCENE = scenes.State.END;
+                    {
+                        console.log("Collision with Cloud!");
+                        var thunderSound = createjs.Sound.play("thunder");
+                        thunderSound.volume = 0.2;
+                        config.Game.SCORE_BOARD.Lives -= 1;
+                        // check if lives falls less than 1 and then switch to END scene
+                        if (config.Game.LIVES < 1) {
+                            config.Game.SCENE = scenes.State.END;
+                        }
                     }
                     break;
             }
