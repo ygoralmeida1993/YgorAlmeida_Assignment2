@@ -11,6 +11,8 @@ module scenes
 
         private _scoreBoard: managers.ScoreBoard;
 
+        private _bullet: objects.Bullet;
+
         // PUBLIC PROPERTIES
 
         // CONSTRUCTOR
@@ -44,6 +46,10 @@ module scenes
             this._scoreBoard = new managers.ScoreBoard();
             config.Game.SCORE_BOARD = this._scoreBoard;
 
+            this._bullet = new objects.Bullet();
+            this._bullet.position = new objects.Vector2(320, 240);
+            this._bullet.isActive = true;
+
              this.Main();
         }        
         
@@ -52,6 +58,8 @@ module scenes
            this._ocean.Update();
 
            this._plane.Update();
+
+           this._bullet.Update();
 
            this._island.Update();
 
@@ -70,6 +78,8 @@ module scenes
             this.addChild(this._island);
 
             this.addChild(this._plane);
+
+            this.addChild(this._bullet);
 
             for (const cloud of this._clouds) {
                 this.addChild(cloud);
