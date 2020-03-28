@@ -38,16 +38,15 @@ var scenes;
             }
             this._scoreBoard = new managers.ScoreBoard();
             config.Game.SCORE_BOARD = this._scoreBoard;
-            this._bullet = new objects.Bullet();
-            this._bullet.position = new objects.Vector2(320, 240);
-            this._bullet.isActive = true;
+            this._bulletManager = new managers.Bullet();
+            config.Game.BULLET_MANAGER = this._bulletManager;
             this.Main();
         };
         Play.prototype.Update = function () {
             var _this = this;
             this._ocean.Update();
             this._plane.Update();
-            this._bullet.Update();
+            this._bulletManager.Update();
             this._island.Update();
             managers.Collision.AABBCheck(this._plane, this._island);
             this._clouds.forEach(function (cloud) {
@@ -59,7 +58,7 @@ var scenes;
             this.addChild(this._ocean);
             this.addChild(this._island);
             this.addChild(this._plane);
-            this.addChild(this._bullet);
+            this._bulletManager.AddBulletsToScene(this);
             for (var _i = 0, _a = this._clouds; _i < _a.length; _i++) {
                 var cloud = _a[_i];
                 this.addChild(cloud);
