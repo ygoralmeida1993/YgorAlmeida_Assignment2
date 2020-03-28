@@ -41,8 +41,17 @@ module objects
 
         private _move(): void
         {
-            let newPositionX = util.Mathf.Lerp(this.position.x, this.stage.mouseX, 0.05);
-            this.position = new Vector2(newPositionX, this._verticalPosition);
+            //let newPositionX = util.Mathf.Lerp(this.position.x, this.stage.mouseX, 0.05);
+            if((config.Game.KEYBOARD_MANAGER.MoveLeft) || (config.Game.KEYBOARD_MANAGER.MoveRight))
+            {
+                let newPositionX = (config.Game.KEYBOARD_MANAGER.MoveRight) ? 
+                this.position.x + this._horizontalSpeed : this.position.x - this._horizontalSpeed;
+
+                // TODO: make movement smoother with a velocity function
+
+                this.position = new Vector2(newPositionX, this._verticalPosition);
+            }
+            
             this._bulletSpawn = new Vector2(this.position.x, this.position.y - this.halfHeight);
         }
         
@@ -55,6 +64,7 @@ module objects
             this._engineSound.loop = -1; // loop forever
             this._engineSound.volume = 0.1; // 10% volume
             this._horizontalSpeed = 10;
+            this.position = new objects.Vector2(config.Game.SCREEN_WIDTH * 0.5, this._verticalPosition);
         }
 
         public Update(): void 
