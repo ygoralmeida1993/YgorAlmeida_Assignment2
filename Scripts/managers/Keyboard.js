@@ -57,7 +57,7 @@ var managers;
                     this.MoveRight = false;
                     break;
                 case enums.Keys.SPACE:
-                    this.Fire = true;
+                    this.Fire = false;
                     break;
             }
         };

@@ -11,6 +11,7 @@ module scenes
 
         private _scoreBoard: managers.ScoreBoard;
         private _bulletManager: managers.Bullet;
+        private _keyboardManager: managers.Keyboard;
 
         // PUBLIC PROPERTIES
 
@@ -38,7 +39,8 @@ module scenes
             this._clouds = new Array<objects.Cloud>(); // empty container
 
             // instantiating CLOUD_NUM clouds
-            for (let index = 0; index < config.Game.CLOUD_NUM; index++) {
+            for (let index = 0; index < config.Game.CLOUD_NUM; index++) 
+            {
                 this._clouds.push(new objects.Cloud());
             }
             
@@ -47,6 +49,9 @@ module scenes
 
             this._bulletManager = new managers.Bullet();
             config.Game.BULLET_MANAGER = this._bulletManager;
+
+            this._keyboardManager = new managers.Keyboard();
+            config.Game.KEYBOARD_MANAGER = this._keyboardManager;
 
              this.Main();
         }        

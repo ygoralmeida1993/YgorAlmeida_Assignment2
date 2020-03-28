@@ -74,7 +74,7 @@ module managers
                     break;
 
                 case enums.Keys.SPACE:
-                    this.Fire = true;
+                    this.Fire = false;
                     break;
             }
         }

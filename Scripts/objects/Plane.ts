@@ -6,6 +6,7 @@ module objects
         private _verticalPosition:number;
         private _engineSound : createjs.AbstractSoundInstance;
         private _bulletSpawn: objects.Vector2;
+        private _horizontalSpeed: number;
         
         // PUBLIC PROPERTIES
         public get engineSound() : createjs.AbstractSoundInstance 
@@ -53,6 +54,7 @@ module objects
             this._engineSound = createjs.Sound.play("engine");
             this._engineSound.loop = -1; // loop forever
             this._engineSound.volume = 0.1; // 10% volume
+            this._horizontalSpeed = 10;
         }
 
         public Update(): void 
@@ -63,7 +65,10 @@ module objects
             // fire bullets every 10 frames
             if(createjs.Ticker.getTicks() % 10 == 0)
             {
-                this.FireBullets();
+                if(config.Game.KEYBOARD_MANAGER.Fire)
+                {
+                    this.FireBullets();
+                }
             }
             
         }

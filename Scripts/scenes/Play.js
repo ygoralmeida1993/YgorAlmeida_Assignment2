@@ -40,6 +40,8 @@ var scenes;
             config.Game.SCORE_BOARD = this._scoreBoard;
             this._bulletManager = new managers.Bullet();
             config.Game.BULLET_MANAGER = this._bulletManager;
+            this._keyboardManager = new managers.Keyboard();
+            config.Game.KEYBOARD_MANAGER = this._keyboardManager;
             this.Main();
         };
         Play.prototype.Update = function () {

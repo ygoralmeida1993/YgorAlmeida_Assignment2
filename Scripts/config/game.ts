@@ -13,6 +13,7 @@ module config
         public static HIGH_SCORE: number = 0;
         public static SCORE_BOARD: managers.ScoreBoard;
         public static BULLET_MANAGER: managers.Bullet;
+        public static KEYBOARD_MANAGER: managers.Keyboard;
         public static TEXTURE_ATLAS: createjs.SpriteSheet;
         public static OCEAN_ATLAS: createjs.SpriteSheet;
     }

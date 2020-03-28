@@ -53,13 +53,16 @@ var objects;
             this._engineSound = createjs.Sound.play("engine");
             this._engineSound.loop = -1; // loop forever
             this._engineSound.volume = 0.1; // 10% volume
+            this._horizontalSpeed = 10;
         };
         Plane.prototype.Update = function () {
             this._move();
             this._checkBounds();
             // fire bullets every 10 frames
             if (createjs.Ticker.getTicks() % 10 == 0) {
-                this.FireBullets();
+                if (config.Game.KEYBOARD_MANAGER.Fire) {
+                    this.FireBullets();
+                }
             }
         };
         Plane.prototype.Reset = function () {
