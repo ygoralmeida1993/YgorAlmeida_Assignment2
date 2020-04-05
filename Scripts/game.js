@@ -18,31 +18,29 @@ var Game = (function () {
         { id: "thunder", src: "./Assets/audio/thunder.ogg" },
     ];
     var spriteData = {
-        "images": {},
+        "images": [
+            "atlas.png"
+        ],
+        "framerate": 20,
         "frames": [
             [1, 1, 16, 16, 0, 0, 0],
-            [19, 1, 150, 50, 0, 0, 0],
-            [1, 53, 226, 178, 0, 0, 0],
-            [229, 53, 62, 63, 0, 0, 0],
-            [1, 233, 65, 65, 0, 0, 0],
-            [68, 233, 65, 65, 0, 0, 0],
-            [135, 233, 65, 65, 0, 0, 0],
-            [202, 233, 65, 65, 0, 0, 0],
-            [1, 300, 150, 50, 0, 0, 0],
-            [153, 300, 150, 50, 0, 0, 0]
+            [19, 1, 62, 62, 0, 0, 0],
+            [83, 1, 65, 65, 0, 0, 0],
+            [150, 1, 65, 65, 0, 0, 0],
+            [1, 68, 145, 138, 0, -36, -27],
+            [148, 68, 150, 50, 0, 0, 0],
+            [1, 208, 150, 50, 0, 0, 0],
+            [153, 208, 150, 50, 0, 0, 0]
         ],
         "animations": {
             "bullet": { "frames": [0] },
-            "button": { "frames": [1] },
-            "cloud": { "frames": [2] },
-            "island": { "frames": [3] },
-            "placeholder": { "frames": [4] },
-            "plane": {
-                "frames": [5, 6, 7],
-                "speed": 0.5
-            },
-            "restartButton": { "frames": [8] },
-            "startButton": { "frames": [9] }
+            "island": { "frames": [1] },
+            "placeholder": { "frames": [2] },
+            "plane": { "frames": [3] },
+            "cloud": { "frames": [4] },
+            "button": { "frames": [5] },
+            "restartButton": { "frames": [6] },
+            "startButton": { "frames": [7] }
         }
     };
     var oceanData = {
