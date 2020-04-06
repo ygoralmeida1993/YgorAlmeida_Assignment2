@@ -24,23 +24,25 @@ var Game = (function () {
         "framerate": 20,
         "frames": [
             [1, 1, 16, 16, 0, 0, 0],
-            [19, 1, 150, 50, 0, 0, 0],
-            [171, 1, 49, 47, 0, -11, -8],
-            [1, 53, 62, 62, 0, 0, 0],
-            [65, 53, 65, 65, 0, 0, 0],
-            [132, 53, 100, 100, 0, 0, 0],
-            [1, 155, 150, 50, 0, 0, 0],
-            [1, 207, 150, 50, 0, 0, 0]
+            [19, 1, 49, 47, 0, -11, -8],
+            [70, 1, 150, 50, 0, 0, 0],
+            [1, 53, 65, 65, 0, 0, 0],
+            [68, 53, 150, 50, 0, 0, 0],
+            [220, 53, 65, 65, 0, 0, 0],
+            [1, 120, 100, 100, 0, 0, 0],
+            [103, 120, 150, 50, 0, 0, 0],
+            [1, 222, 150, 50, 0, 0, 0]
         ],
         "animations": {
             "bullet": { "frames": [0] },
-            "button": { "frames": [1] },
-            "cloud": { "frames": [2] },
+            "cloud": { "frames": [1] },
+            "instructionsButton": { "frames": [2] },
             "island": { "frames": [3] },
-            "placeholder": { "frames": [4] },
-            "plane": { "frames": [5] },
-            "restartButton": { "frames": [6] },
-            "startButton": { "frames": [7] }
+            "mainMenuButton": { "frames": [4] },
+            "placeholder": { "frames": [5] },
+            "plane": { "frames": [6] },
+            "restartButton": { "frames": [7] },
+            "startButton": { "frames": [8] }
         }
     };
     var oceanData = {
