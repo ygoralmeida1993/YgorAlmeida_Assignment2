@@ -26,11 +26,7 @@ let Game = (function(){
     let spriteData =
     {
 
-        "images": [
-            "atlas.png"
-        ],
-        
-        "framerate": 20,
+        "images": {},
         "frames": [
             [1, 1, 16, 16, 0, 0, 0],
             [19, 1, 49, 47, 0, -11, -8],
