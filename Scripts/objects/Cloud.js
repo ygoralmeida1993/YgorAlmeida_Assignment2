@@ -35,7 +35,7 @@ var objects;
         // PUBLIC METHODS
         Cloud.prototype.Start = function () {
             this.type = enums.GameObjectType.CLOUD;
-            this.alpha = 0.5; // 50% transparent
+            this.alpha = 0.9; // 90% transparent
             this.Reset();
         };
         Cloud.prototype.Update = function () {

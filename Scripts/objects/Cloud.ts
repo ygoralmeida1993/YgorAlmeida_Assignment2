@@ -35,7 +35,7 @@ module objects
         public Start(): void 
         {
             this.type = enums.GameObjectType.CLOUD;
-            this.alpha = 0.5; // 50% transparent
+            this.alpha = 0.9; // 90% transparent
             this.Reset();
         }
         
