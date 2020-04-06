@@ -16,8 +16,8 @@ var Game = (function () {
         { id: "instructions", src: "./Assets/images/instructions.png" },
         { id: "ocean", src: "./Assets/images/ocean.gif" },
         { id: "atlas", src: "./Assets/sprites/atlas.png" },
-        { id: "engine", src: "./Assets/audio/engine.ogg" },
-        { id: "yay", src: "./Assets/audio/yay.ogg" },
+        { id: "engine", src: "./Assets/audio/engine.mp3" },
+        { id: "yay", src: "./Assets/audio/yay.mp3" },
         { id: "thunder", src: "./Assets/audio/thunder.ogg" },
     ];
     var spriteData = {
