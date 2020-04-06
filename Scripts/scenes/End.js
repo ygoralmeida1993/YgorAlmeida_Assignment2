@@ -28,9 +28,10 @@ var scenes;
         // Initializing and Instantiating
         End.prototype.Start = function () {
             //instantiate a new Text object
-            this._gameOverLabel = new objects.Label("Game Over", "80px", "Consolas", "#FFFF00", 320, 180, true);
+            this._gameOverLabel = new objects.Label("Game Over", "80px", "Consolas", "#FF4500", 320, 100, true);
             // buttons
-            this._restartButton = new objects.Button("restartButton", 320, 430, true);
+            this._restartButton = new objects.Button("restartButton", 320, 360, true);
+            this._mainMenuButton = new objects.Button("mainMenuButton", 320, 420, true);
             this._ocean = new objects.Ocean();
             this._scoreBoard = new managers.ScoreBoard();
             this._scoreBoard.HighScore = config.Game.HIGH_SCORE;
@@ -47,6 +48,10 @@ var scenes;
                 config.Game.LIVES = 5;
                 config.Game.SCORE = 0;
                 config.Game.SCENE = scenes.State.PLAY;
+            });
+            this.addChild(this._mainMenuButton);
+            this._mainMenuButton.on("click", function () {
+                config.Game.SCENE = scenes.State.START;
             });
             this.addChild(this._scoreBoard.highScoreLabel);
         };

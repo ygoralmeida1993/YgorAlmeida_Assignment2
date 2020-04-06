@@ -5,6 +5,7 @@ module scenes
         // PRIVATE INSTANCE MEMBERS
         private _gameOverLabel: objects.Label;
         private _restartButton: objects.Button;
+        private _mainMenuButton: objects.Button;
         private _ocean: objects.Ocean;
 
         private _scoreBoard: managers.ScoreBoard;
@@ -27,9 +28,10 @@ module scenes
         public Start(): void 
         {
              //instantiate a new Text object
-            this._gameOverLabel = new objects.Label("Game Over", "80px", "Consolas", "#FFFF00", 320, 180, true);
+            this._gameOverLabel = new objects.Label("Game Over", "80px", "Consolas", "#FF4500", 320, 100, true);
             // buttons
-             this._restartButton = new objects.Button("restartButton", 320, 430, true);
+             this._restartButton = new objects.Button("restartButton", 320, 360, true);
+             this._mainMenuButton = new objects.Button("mainMenuButton", 320, 420, true);
             
              this._ocean = new objects.Ocean();
 
@@ -57,6 +59,11 @@ module scenes
                 config.Game.SCORE = 0;
 
                 config.Game.SCENE = scenes.State.PLAY;
+            });
+
+            this.addChild(this._mainMenuButton);
+            this._mainMenuButton.on("click", () =>{
+                config.Game.SCENE = scenes.State.START;
             });
 
             this.addChild(this._scoreBoard.highScoreLabel);
