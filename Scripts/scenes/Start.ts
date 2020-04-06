@@ -6,6 +6,7 @@ module scenes
         private _welcomeLabel: objects.Label;
         private _startButton: objects.Button;
         private _ocean: objects.Ocean;
+        private _furiousDragon: objects.Ocean;
 
         // PUBLIC PROPERTIES
 
@@ -23,7 +24,8 @@ module scenes
         public Start(): void 
         {
              //instantiate a new Text object
-            this._welcomeLabel = new objects.Label("Mail Pilot", "80px", "Consolas", "#FFFF00", 320, 180, true);
+
+            this._welcomeLabel = new objects.Label("Furious Dragon", "80px", "Consolas", "#FF4500", 320, 180, true);
             // buttons
              this._startButton = new objects.Button("startButton", 320, 360, true);
 
@@ -39,6 +41,7 @@ module scenes
         public Main(): void 
         {
             this.addChild(this._ocean);
+
        
             this.addChild(this._welcomeLabel);
 

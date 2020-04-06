@@ -27,7 +27,7 @@ var scenes;
         // PUBLIC METHODS
         Start.prototype.Start = function () {
             //instantiate a new Text object
-            this._welcomeLabel = new objects.Label("Mail Pilot", "80px", "Consolas", "#FFFF00", 320, 180, true);
+            this._welcomeLabel = new objects.Label("Furious Dragon", "80px", "Consolas", "#FF4500", 320, 180, true);
             // buttons
             this._startButton = new objects.Button("startButton", 320, 360, true);
             this._ocean = new objects.Ocean();

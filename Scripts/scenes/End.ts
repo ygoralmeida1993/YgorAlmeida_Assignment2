@@ -7,7 +7,6 @@ module scenes
         private _restartButton: objects.Button;
         private _mainMenuButton: objects.Button;
         private _ocean: objects.Ocean;
-
         private _scoreBoard: managers.ScoreBoard;
 
         // PUBLIC PROPERTIES

@@ -16,6 +16,9 @@ let Game = (function(){
 
     let assetManifest = 
     [
+        {id:"furious", src: "./Assets/images/furiousDragon.png"},
+        {id:"gameover", src: "./Assets/images/gameOver.png"},
+        {id:"instructions", src: "./Assets/images/instructions.png"},
         {id:"ocean", src:"./Assets/images/ocean.gif"},
         {id:"atlas", src:"./Assets/sprites/atlas.png"},
         {id:"engine", src:"./Assets/audio/engine.ogg"},

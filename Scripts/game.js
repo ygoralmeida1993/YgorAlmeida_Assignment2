@@ -11,6 +11,9 @@ var Game = (function () {
     var textureAtlas;
     var oceanAtlas;
     var assetManifest = [
+        { id: "furious", src: "./Assets/images/furiousDragon.png" },
+        { id: "gameover", src: "./Assets/images/gameOver.png" },
+        { id: "instructions", src: "./Assets/images/instructions.png" },
         { id: "ocean", src: "./Assets/images/ocean.gif" },
         { id: "atlas", src: "./Assets/sprites/atlas.png" },
         { id: "engine", src: "./Assets/audio/engine.ogg" },
@@ -18,10 +21,7 @@ var Game = (function () {
         { id: "thunder", src: "./Assets/audio/thunder.ogg" },
     ];
     var spriteData = {
-        "images": [
-            "atlas.png"
-        ],
-        "framerate": 20,
+        "images": {},
         "frames": [
             [1, 1, 16, 16, 0, 0, 0],
             [19, 1, 49, 47, 0, -11, -8],
